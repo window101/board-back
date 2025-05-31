@@ -1,4 +1,4 @@
-
+package com.example.boardback.provider;
 @Component
 public class JwtProvider {
     private String secretKey = "S3cr3tK3y";
