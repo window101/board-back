@@ -1,3 +1,11 @@
 {
-  "java.home": "C:\\java\\jdk17"
+  "java.import.gradle.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.15.6-hotspot",
+      "default": true
+    }
+  ]
 }
