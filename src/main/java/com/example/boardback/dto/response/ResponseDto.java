@@ -8,11 +8,14 @@ public class ResponseDto {
     private String code;
     private String message;
 
-    public static ResponseEntity<ResponseDto> databaseError() { // responsedto를 반환환
+    public static ResponseEntity<ResponseDto> databaseError() { // responsedto를 반환
         ResponseDto responseBody = new ResponseDto(ResponseCode.DATABASE_ERROR, ResponseMessage.DATABASE_ERROR);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseBody);
     }
-    
+    public static ResponseEntity<ResponseDto> validationFailed() {
+        ResponseDto responseBody = new ResponseDto(ResponseCode.VALIDATION_FAILED, ResponseMessage.VALIDATION_FAILED);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
+    }
 }
 
 

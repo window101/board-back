@@ -10,7 +10,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
     // Filter에서 jwt 검증을 하고 email을 검증함
 
 
-    private final JwtProvider jwtProvider; // jwt를 검증하고 사용자 정보 추출, 외부에서 주입받는 의존성성
+    private final JwtProvider jwtProvider; // jwt를 검증하고 사용자 정보 추출, 외부에서 주입받는 의존성
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
@@ -39,7 +39,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
         }catch(Exception exception) {
             exception.printStackTrace();
         }
-        filterChain.doFilter(request, response); // 다음 필터로 넘김김
+        filterChain.doFilter(request, response); // 다음 필터로 넘김
         
     }
 
@@ -54,13 +54,4 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter{
         return token;
 
     }
-
-
-
-
-
-
-
-
-
 }
