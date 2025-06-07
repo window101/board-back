@@ -24,4 +24,10 @@ public class SignUpRequestDto {
     @NotNull @AssertTrue // true만 받는다
     private Boolean agreedPersonal; // 개인정보 동의여부
 
+    private String type;
+    //앱 회원가입, 카카오 로그인, 네이버 로그인
+
+    private String userId;
+    //oauth 로그인 시
+
 }
